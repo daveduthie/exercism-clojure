@@ -1,0 +1,12 @@
+(mod 5 2
+)
+(mod 5 3)
+(rem 5 3)
+exit
+(use 'java-time)
+exit
+(t/days 1)
+exit
+(ns meetup)
+(t/days 1)
+exit

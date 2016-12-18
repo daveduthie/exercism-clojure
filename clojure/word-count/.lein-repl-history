@@ -1,0 +1,31 @@
+(require [clojure.string :as str])
+(clojure.string/split " " "this is a phrase")
+(doc clojure.string/split)
+(clojure.string/split "this is a phrase"i " ")
+(clojure.string/split "this is a phrase" " ")
+(doc clojure.string/split)
+(clojure.string/split "this is a phrase" #" ")
+(ns word-count)
+(word-count "yoyo")
+help
+(help)
+(doc repl)
+(ns user)
+(doc help)
+help
+(help)
+(source word-count)
+(ns word-count)
+(source word-count)
+)help)
+(help)
+(ns user)
+(help)
+(use 'word-count)
+(word-count "this yo")
+(defn word-count [phrase}
+(defn word-count [phrase]
+  (clojure.string/split phrase #" "))
+(word-count "this yo"
+)
+exit
