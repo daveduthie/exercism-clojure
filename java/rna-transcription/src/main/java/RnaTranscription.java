@@ -2,13 +2,18 @@ public class RnaTranscription {
     public String ofDna(String dnaString) {
         String result = "";
         for (char s:dnaString.toCharArray()) {
-            switch (s) {
-                case 'C': { result += "G"; break; }
-                case 'G': { result += "C"; break; }
-                case 'A': { result += "U"; break; }
-                case 'T': { result += "A"; break; }
-            }
+            result += complementaryNucleotide(s);
         }
         return result;
+    }
+
+    private String complementaryNucleotide(char dna) {
+        switch (dna) {
+            case 'C': { return "G"; }
+            case 'G': { return "C"; }
+            case 'A': { return "U"; }
+            case 'T': { return "A"; }
+            default:  { throw new IllegalArgumentException("That's not DNA!"); }
+        }
     }
 }
