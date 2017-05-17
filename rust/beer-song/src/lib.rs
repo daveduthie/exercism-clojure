@@ -1,12 +1,12 @@
 pub fn verse<'a>(num: u32) -> String {
-    let (num_bef, num_aft, det, units_before, units_after) = match num {
-        1 | 0 => ("1".to_string(), "no more".to_string(), "it", "bottle", "bottles"),
+    let (num_bef, units_bef, num_aft, units_aft, det) = match num {
+        1 | 0 => ("1".to_string(), "bottle", "no more".to_string(), "bottles", "it"),
         _ => {
             (num.to_string(),
-             (num - 1).to_string(),
-             "one",
              "bottles",
-             if num == 2 { "bottle" } else { "bottles" })
+             (num - 1).to_string(),
+             if num == 2 { "bottle" } else { "bottles" },
+             "one")
         }
     };
 
@@ -24,10 +24,10 @@ pub fn verse<'a>(num: u32) -> String {
                      Take {det} down and pass it around, \
                      {na} {ua} of beer on the wall.\n",
                     nb = num_bef,
-                    ub = units_before,
+                    ub = units_bef,
                     det = det,
                     na = num_aft,
-                    ua = units_after)
+                    ua = units_aft)
         }
     }
 }
